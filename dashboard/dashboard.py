@@ -363,7 +363,7 @@ with st.sidebar:
             <div style="color:#FAFAFA; font-weight:600; font-size:0.95rem;">Bike Analytics</div>
         </div>
         <div style="color:#52525B; font-size:0.72rem; margin-top:0.4rem; font-family:'JetBrains Mono', monospace;">
-            v1.0 · dicoding submission
+            dicoding submission
         </div>
     </div>
     """, unsafe_allow_html=True)
