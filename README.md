@@ -17,9 +17,13 @@ Proyek ini merupakan submission akhir kelas **Belajar Analisis Data dengan Pytho
 
 ```
 submission
+├── .streamlit
+│   └── config.toml
 ├── dashboard
-│   ├── main_data.csv
-│   └── dashboard.py
+│   ├── .streamlit
+│   │   └── config.toml
+│   ├── dashboard.py
+│   └── main_data.csv
 ├── data
 │   ├── day.csv
 │   └── hour.csv
@@ -29,7 +33,7 @@ submission
 └── url.txt
 ```
 
-## Cara Menjalankan Dashboard
+## Cara Menjalankan Dashboard Secara Lokal
 
 ### 1. Menyiapkan Virtual Environment (opsional tetapi direkomendasikan)
 
@@ -60,7 +64,11 @@ Dashboard akan terbuka otomatis di browser pada alamat `http://localhost:8501`.
 jupyter notebook notebook.ipynb
 ```
 
-Pastikan folder `data` berada pada direktori yang sama dengan `notebook.ipynb` karena notebook memuat berkas dari path `data/day.csv` dan `data/hour.csv`.
+Pastikan folder `data` berada pada direktori yang sama dengan `notebook.ipynb` karena notebook memuat berkas dari path `data/day.csv` dan `data/hour.csv`. Anda juga bisa membuka notebook ini di Google Colab atau VSCode karena format `.ipynb` kompatibel di semua environment.
+
+## Dashboard Online
+
+Dashboard versi online dapat diakses melalui tautan yang tercantum pada berkas `url.txt`.
 
 ## Ringkasan Temuan Utama
 
@@ -70,6 +78,7 @@ Musim Gugur mencatat rata-rata peminjaman harian tertinggi sebesar 5.644 sepeda,
 
 - Python 3.11
 - Pandas untuk manipulasi data
-- Matplotlib dan Seaborn untuk visualisasi
-- Streamlit untuk dashboard interaktif
+- Matplotlib dan Seaborn untuk visualisasi di notebook
+- Plotly untuk visualisasi interaktif di dashboard
+- Streamlit untuk dashboard web
 - Jupyter Notebook untuk dokumentasi analisis

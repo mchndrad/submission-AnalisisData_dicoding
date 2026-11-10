@@ -5,6 +5,8 @@ Email: muhamadchandra.d19@gmail.com
 ID Dicoding: m_chn9
 """
 
+# Mengimpor pathlib untuk pengelolaan path file yang portable antar OS dan deployment
+from pathlib import Path
 # Mengimpor pandas untuk manipulasi dan agregasi data
 import pandas as pd
 # Mengimpor plotly express untuk membuat chart interaktif
@@ -13,6 +15,10 @@ import plotly.express as px
 import plotly.graph_objects as go
 # Mengimpor streamlit sebagai framework utama dashboard
 import streamlit as st
+
+# Menentukan direktori tempat script berada agar path data selalu benar
+# (penting untuk deployment Streamlit Cloud dimana CWD = repo root, bukan folder script)
+BASE_DIR = Path(__file__).parent
 
 # =====================================================================
 # KONFIGURASI HALAMAN
@@ -331,8 +337,10 @@ st.markdown("""
 # =====================================================================
 @st.cache_data
 def load_data():
+    # Membangun path absolut ke main_data.csv relatif terhadap lokasi script
+    data_path = BASE_DIR / 'main_data.csv'
     # Membaca main_data.csv yang sudah diperkaya dengan kolom label dan denormalisasi
-    df = pd.read_csv('main_data.csv')
+    df = pd.read_csv(data_path)
     # Mengonversi kolom dteday ke datetime agar filter tanggal bekerja dengan benar
     df['dteday'] = pd.to_datetime(df['dteday'])
     return df
@@ -355,7 +363,7 @@ with st.sidebar:
             <div style="color:#FAFAFA; font-weight:600; font-size:0.95rem;">Bike Analytics</div>
         </div>
         <div style="color:#52525B; font-size:0.72rem; margin-top:0.4rem; font-family:'JetBrains Mono', monospace;">
-            dicoding submission
+            v1.0 · dicoding submission
         </div>
     </div>
     """, unsafe_allow_html=True)
