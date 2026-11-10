@@ -2,6 +2,10 @@
 
 Proyek ini merupakan submission akhir kelas **Belajar Analisis Data dengan Python** di Dicoding. Analisis dilakukan terhadap dataset Bike Sharing dari Capital Bikeshare System (Washington D.C.) selama periode 2011 hingga 2012.
 
+## Live Dashboard
+
+Dashboard interaktif dapat diakses di: **[https://bikesharing-chan.streamlit.app/](https://bikesharing-chan.streamlit.app/)**
+
 ## Identitas
 
 - **Nama:** Muhamad Chandra Darmawan
@@ -68,7 +72,7 @@ Pastikan folder `data` berada pada direktori yang sama dengan `notebook.ipynb` k
 
 ## Dashboard Online
 
-Dashboard versi online dapat diakses melalui tautan yang tercantum pada berkas `url.txt`.
+Dashboard versi online dapat diakses langsung di `https://bikesharing-chan.streamlit.app/`. Tautan juga tercantum pada berkas `url.txt`.
 
 ## Ringkasan Temuan Utama
 
